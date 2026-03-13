@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-eojo#824!0tta8-x%=p_uuidr150(6g9#$q_-#wu#q9stni3j-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', '.8000.app.github.dev']
 
 
 # Application definition
@@ -133,6 +133,9 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = ['*']
 CORS_ALLOW_METHODS = ['*']
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*-8000\.app\.github\.dev$",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
